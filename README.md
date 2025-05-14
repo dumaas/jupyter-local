@@ -38,14 +38,3 @@ All commands use `docker/docker-compose.yaml` as the config file via the `-f` fl
 | `make down`      | Stops and removes the container and orphan networks   |
 | `make bash`      | Opens an interactive bash session in the container    |
 | `make ecr-login` | Logs in to AWS ECR                                    |
-
-## 🧠 Troubleshooting
-
-- **Notebooks not showing up?**
-  - Ensure `./notebooks` exists and is correctly volume-mounted in `docker-compose.yaml`.
-- **Permission denied when saving?**
-  - Check host directory permissions and make sure the directory isn't owned by root.
-- **SSL Errors during build?**
-  - Avoid unnecessary `apt-get` usage unless needed. Let the base Jupyter image handle most system deps.
-- **Changes not applying after rebuild?**
-  - Use `make build` to force a full rebuild with cache busting.
