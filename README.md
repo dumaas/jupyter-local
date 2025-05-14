@@ -2,16 +2,12 @@
 
 This repository is a personal Jupyter notebook playground. It provides a portable and consistent environment to write and run Python notebooks locally using Docker and JupyterLab, with dependencies managed via `requirements.txt`.
 
----
-
 ## 🚀 Quickstart
 
 ### ✅ Requirements
 
 - [Docker](https://docs.docker.com/get-docker/)
 - [`make`](https://formulae.brew.sh/formula/make)
-
----
 
 ### 📦 Build & Start
 
@@ -21,8 +17,6 @@ make bootstrap
 ```
 
 Once the container is running, access JupyterLab at: [http://localhost:8888](http://localhost:8888)
-
----
 
 ## 🔧 Customizing
 
@@ -34,8 +28,6 @@ Once the container is running, access JupyterLab at: [http://localhost:8888](htt
 ```bash
 make build
 ```
-
----
 
 ## 🐳 Makefile Commands
 
@@ -51,8 +43,6 @@ All commands use `docker/docker-compose.yaml` as the config file via the `-f` fl
 | `make bash`      | Opens an interactive bash session in the container    |
 | `make ecr-login` | Logs in to AWS ECR                                    |
 
----
-
 ## 🧠 Troubleshooting
 
 - **Notebooks not showing up?**
@@ -63,8 +53,6 @@ All commands use `docker/docker-compose.yaml` as the config file via the `-f` fl
   - Avoid unnecessary `apt-get` usage unless needed. Let the base Jupyter image handle most system deps.
 - **Changes not applying after rebuild?**
   - Use `make build` to force a full rebuild with cache busting.
-
----
 
 ## 📄 License
 
