@@ -23,11 +23,7 @@ Once the container is running, access JupyterLab at: [http://localhost:8888](htt
 ### Install New Packages
 
 1. Add the package(s) to `requirements.txt`
-2. Rebuild the Docker image:
-
-```bash
-make build
-```
+2. Rebuild the Docker image with `make build`
 
 ## 🐳 Makefile Commands
 
@@ -53,7 +49,3 @@ All commands use `docker/docker-compose.yaml` as the config file via the `-f` fl
   - Avoid unnecessary `apt-get` usage unless needed. Let the base Jupyter image handle most system deps.
 - **Changes not applying after rebuild?**
   - Use `make build` to force a full rebuild with cache busting.
-
-## 📄 License
-
-MIT — free to use, modify, and extend.
