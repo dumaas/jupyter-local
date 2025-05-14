@@ -1,0 +1,19 @@
+services:
+  jupyter:
+    build:
+      context: ..
+      target: development
+      dockerfile: ./docker/Dockerfile
+      args:
+        - PIP_INDEX_URL
+    container_name: jupyter_notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../notebooks:/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - DOCKER_BUILDKIT=1
+    stdin_open: true
+    tty: true
+    image: jupyter-local:latest
