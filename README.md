@@ -27,8 +27,6 @@ Once the container is running, access JupyterLab at: [http://localhost:8888](htt
 
 ## 🐳 Makefile Commands
 
-All commands use `docker/docker-compose.yaml` as the config file via the `-f` flag.
-
 | Command          | Description                                           |
 |------------------|-------------------------------------------------------|
 | `make bootstrap` | Rebuilds the image and brings up the container        |
