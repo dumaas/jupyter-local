@@ -7,13 +7,7 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /work
 
 # Pull packages from Artifactory
-ARG PIP_INDEX_URL="FORGOTTEN"
-RUN if [ "$PIP_INDEX_URL" = "FORGOTTEN" ]; \
-    then \
-        echo "PIP_INDEX_URL is required"; \
-        exit 1; \
-    fi
-
+ARG PIP_INDEX_URL=""
 COPY requirements.txt /work/
 RUN --mount=type=cache,target=/root/.cache pip install -r requirements.txt
 
